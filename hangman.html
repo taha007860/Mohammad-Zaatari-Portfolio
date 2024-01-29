@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Hangman Game</title>
+  <meta name="description" content="Hangman Game" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/png/profile.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+             src="./assets/png/profile.png"
+              alt="Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Mohammad Zaatari</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Hangman</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Hangman is a fun and interactive word-guessing game. It was created using React JS.
+          </p>
+        </div>
+        <div class="project-cs-hero__cta">
+          <a href="https://drive.google.com/file/d/1j4YANNT76UkjuPNXe1jlaZdQTTyCZ6f1/view?usp=sharing" class="btn btn--bg" target="_blank">Watch Demo</a>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/hangman.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Project Description: 🎮</h3>
+              <p class="project-details__desc-para">
+                Hangman is a fun and interactive word-guessing game. It was created using React JS. The game challenges players to guess a secret word by guessing one letter at a time. Before the man is hanged, players have a limited number of chances to guess the correct letters; otherwise, the hangman is fully drawn, resulting in a GAME OVER. 💀
+             </p>
+             <p class="project-details__desc-para">
+              This game's implementation offers a user-friendly interface that allows players to easily enter their guesses and track their progress. The game also includes different word lengths and categories to keep players involved and challenged.
+             </p>
+             <p class="project-details__desc-para">
+              In the future, Hangman will be expanded to include even more features. Planned enhancements include the integration of HackerRank challenges into the game. Players will have to solve HackerRank problems to earn letters that can be used to help solve the hangman puzzle. This integration will increase the game's engagement and educational value for those looking to improve their algorithm and data structure skills. 💡🔍
+             </p>
+             <p class="project-details__desc-para">
+              With Hangman, you can enjoy a classic word-guessing game that's easy to play and hard to put down. And with planned enhancements, the game will only get better and more challenging over time. 🚀
+             </p>
+             <h3 class="project-details__content-title">Features: 🎯</h3>
+             <p class="project-details__desc-para">
+              Hangman Game includes several components and game mechanics that work together to create a fun and engaging gaming experience:
+             </p>
+             <ul>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Figure Component:</strong> The Figure component displays the hangman image, with different parts of the figure appearing as the player makes incorrect guesses. 🤖</li>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Header Component:</strong> The Header component displays the game's title and challenges players to find the hidden word by entering letters. Good luck! 🤞</li>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Notification Component:</strong> The Notification component displays messages to the player throughout the game. If the player has already entered a letter, the component displays an alert informing the player that the letter has already been entered. This can help players avoid repeating guesses and save time. 📢</li>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Popup Component:</strong> The Popup component is responsible for displaying the game's outcome when the player either wins or loses the game. If the player loses, it displays the correct answer. In both cases, it provides an option for the player to play again. 🎉</li>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Word Component:</strong> The Word component is responsible for displaying the word that the player needs to guess. This component receives the word as a prop and renders each letter of the word as a separate component. It also keeps track of the letters that have been correctly guessed by the player and displays them in their correct positions in the word.</li>
+              <li style="font-size: 1.8rem;
+              line-height: 1.7;
+              color: grey;
+              margin-bottom: 2rem;"><strong>Wrong Letters Component:</strong> The Wrong Letters component is responsible for displaying the letters that the player has guessed incorrectly. This component receives an array of wrong letters as a prop and renders each letter as a separate component. It also keeps track of the number of wrong letters guessed and displays the hangman figure accordingly.</li>
+             </ul>
+             <h3 class="project-details__content-title">Styling: 🎨</h3>
+             <p class="project-details__desc-para">
+              The App.css file contains the styling for the hangman game web page. It sets the background color, font family, and height of the page, as well as the styling for the game container, figure container, wrong letters container, word container, popup container, and notification container.
+             </p>
+             <p class="project-details__desc-para">
+              The figure container contains the SVG graphics for the hangman figure, while the wrong letters container displays the letters that the player has guessed incorrectly. The word container displays the word that the player needs to guess, and the popup container displays a popup message when the game is over.
+             </p>
+             <p class="project-details__desc-para">
+              The notification container displays a notification message when the player has already guessed a letter. The CSS styling also includes animations and transitions for the notification container and popup container to make the game more engaging for the player.
+             </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">HTML</div>
+                <div class="skills__skill">CSS</div>
+                <div class="skills__skill">JavaScript</div>
+                <div class="skills__skill">ReactJS</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Check out!</h3>
+                <a
+                href="https://hangman-nine-lemon.vercel.app/"
+                    class="btn btn--med btn--theme project-details__links-btn"
+                    target="_blank"
+                    >Live Link</a
+                >
+                <a
+              href="https://drive.google.com/file/d/1j4YANNT76UkjuPNXe1jlaZdQTTyCZ6f1/view?usp=sharing"
+                class="btn btn--med btn--theme project-details__links-btn"
+                target="_blank"
+                >Demo Link</a
+              >
+              <a
+                href="https://github.com/taha007860/hangman"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mohammad-al-zaatari-976347240/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                  
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/taha007860">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/mohammedzaatari.123/?hl=en">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Mohammad Zaatari</h4>
+            <p class="main-footer__short-desc">
+              Crafting Comprehensive Digital Solutions Since 2022!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="https://selimellieh72.github.io"
+            >Mohammad Zaatari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
