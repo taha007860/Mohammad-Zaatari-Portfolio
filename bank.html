@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Bank Management System Database</title>
+  <meta name="description" content="Bank Management System Database" />
+
+    <link rel="stylesheet" href="css/style.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="./assets/png/profile.png" type="image/x-icon">
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__content">
+        <div class="header__logo-container">
+          <div class="header__logo-img-cont">
+            <img
+             src="./assets/png/profile.png"
+              alt="Logo Image"
+              class="header__logo-img"
+            />
+          </div>
+          <span class="header__logo-sub">Mohammad Zaatari</span>
+        </div>
+        <div class="header__main">
+          <ul class="header__links">
+            <li class="header__link-wrapper">
+              <a href="./index.html" class="header__link"> Home </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#about" class="header__link">About </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#projects" class="header__link">
+                Projects
+              </a>
+            </li>
+            <li class="header__link-wrapper">
+              <a href="./index.html#contact" class="header__link"> Contact </a>
+            </li>
+          </ul>
+          <div class="header__main-ham-menu-cont">
+            <img
+              src="./assets/svg/ham-menu.svg"
+              alt="hamburger menu"
+              class="header__main-ham-menu"
+            />
+            <img
+              src="./assets/svg/ham-menu-close.svg"
+              alt="hamburger menu close"
+              class="header__main-ham-menu-close d-none"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header__sm-menu">
+        <div class="header__sm-menu-content">
+          <ul class="header__sm-menu-links">
+            <li class="header__sm-menu-link">
+              <a href="./index.html"> Home </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#about"> About </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#projects"> Projects </a>
+            </li>
+
+            <li class="header__sm-menu-link">
+              <a href="./index.html#contact"> Contact </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </header>
+    <section class="project-cs-hero">
+      <div class="project-cs-hero__content">
+        <h1 class="heading-primary">Bank Management System Database</h1>
+        <div class="project-cs-hero__info">
+          <p class="text-primary">
+            Bank Management System Database is a project created as part of CMPS 244 course at the American University of Beirut. The purpose of this project is to create a database management system that can store and manage information related to a fictitious bank, including customers, accounts, transactions...
+          </p>
+        </div>
+      </div>
+    </section>
+    <section class="project-details">
+      <div class="main-container">
+        <div class="project-details__content">
+          <div class="project-details__showcase-img-cont">
+            <img
+              src="./assets/png/bank.png"
+              alt="Project Image"
+              class="project-details__showcase-img"
+            />
+          </div>
+          <div class="project-details__content-main">
+            <div class="project-details__desc">
+              <h3 class="project-details__content-title">Abstract</h3>
+              <p class="project-details__desc-para">
+                The goal of this project is to create a database management system for a fictitious bank that will store information about customers, accounts, transactions, loans, branches, and employees. The system will provide a user-friendly interface for bank employees and customers to access and manage this information.
+              </p>
+             <h3 class="project-details__content-title">Schema</h3>
+             <p class="project-details__desc-para">
+                Our database will consist of the following tables and their respective attributes:
+              </p>
+             <ul>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Employee(Employee_ID integer (primary key), Bdate date, Address varchar(255), Jobtype varchar(255), Salary float, Name varchar(255), PhoneNum integer)</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Dependent(Dependent_ID integer (primary key), D_Name varchar(255), Relationship varchar(255), EmployeeID integer (foreign key references Employee.Employee_ID))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Accountant(Employee_ID integer (primary key, foreign key references Employee.Employee_ID), Proficiency string)</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Technician(EmployeeID integer (primary key, foreign key references Employee.Employee_ID), Technical_Expertise varchar(255))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Data_Analyst(Employee_ID integer (primary key, foreign key references Employee.Employee_ID), Proficiency_in_tools varchar(255))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Bank_Teller(Employee_ID integer (primary key, foreign key references Employee.Employee_ID), Organizational_skills varchar(255))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Customer(Customer_ID integer (primary key), PhoneNum integer, Email varchar(15), First_Name varchar(255), Last_Name varchar(255), Address varchar(255), Date_Of_Birth date)</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Bank(Bank_Code integer (primary key), Bank_Name varchar(255), Address varchar(255))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Account(Account_Num integer (primary key), Account_Type varchar(255), Balance float, Status varchar(255), CustomerID integer (foreign key references Customer.Customer_ID))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Transaction(Transaction_ID integer (primary key), Transaction_Type varchar(255), Amount float, Date date, Account_Num integer (foreign key references Account.Account_Num))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Branch(Branch_ID integer (primary key), Branch_Name varchar(255), Address varchar(255), PhoneNum integer)</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Loan(Loan_ID integer (primary key), CustomerID integer (foreign key references Customer.Customer_ID))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Transaction_Branch(Transaction_ID integer (foreign key references Transaction.Transaction_ID), Branch_ID integer (foreign key references Branch.Branch_ID))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Head_Bank_Employee(Employee_ID integer (foreign key references Employee.Employee_ID), Bank_Code integer (foreign key references Bank.Bank_Code))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Branch_Employee(Branch_ID integer (foreign key references Branch.Branch_ID), Employee_ID integer (foreign key references Employee.Employee_ID))</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Branch_Manager(EmployeeID integer (foreign key references Employee.Employee_ID), Branch_ID integer (foreign key references Branch.Branch_ID), Branch_Manager varchar(255))</li>
+             </ul>
+             <h3 class="project-details__content-title">Views</h3>
+             <p class="project-details__desc-para">
+                In addition to the tables, the following views have been created to provide a more user-friendly interface to the database:
+              </p>
+              <ul>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Customer_Accounts: This view lists all the accounts associated with each customer, along with their balance and status.</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Employee_Details: This view lists all the details of each employee, including their name, job type, and salary.</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Branch_Transactions: This view lists all the transactions that have taken place at each branch, along with the date, type, and amount of the transaction.</li>
+              </ul>
+              <h3 class="project-details__content-title">Indexes</h3>
+             <p class="project-details__desc-para">
+                The following indexes have been created in order to optimize the performance of the database:
+              </p>
+              <ul>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Employee.Employee_ID</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Dependent.Dependent_ID</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Customer.Customer_ID</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Bank.Bank_Code</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Account.Account_Num</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Transaction.Transaction_ID</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Branch.Branch_ID</li>
+                <li style="font-size: 1.8rem;
+                line-height: 1.7;
+                color: grey;
+                margin-bottom: 2rem;">Index on Loan.Loan_ID</li>
+              </ul>
+              <h3 class="project-details__content-title">Usage</h3>
+             <p class="project-details__desc-para">
+                To use this database, you will first need to set up MySQL. Once you have done so, you can create a new database and import the schema and data from the provided SQL files. After that, you can use a variety of SQL queries to interact with the database and retrieve the information you need.
+              </p>
+            </div>
+            <div class="project-details__tools-used">
+              <h3 class="project-details__content-title">Tools Used</h3>
+              <div class="skills">
+                <div class="skills__skill">MySQL</div>
+              </div>
+            </div>
+            <div class="project-details__links">
+              <h3 class="project-details__content-title">Check out!</h3>
+              <a
+                href="https://github.com/taha007860/Bank-Management-System/tree/main"
+                class="btn btn--med btn--theme-inv project-details__links-btn"
+                target="_blank"
+                >Code Link</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer class="main-footer">
+      <div class="main-container">
+        <div class="main-footer__upper">
+          <div class="main-footer__row main-footer__row-1">
+            <h2 class="heading heading-sm main-footer__heading-sm">
+              <span>Social</span>
+            </h2>
+            <div class="main-footer__social-cont">
+              <a target="_blank" rel="noreferrer" href="https://www.linkedin.com/in/mohammad-al-zaatari-976347240/">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/linkedin-ico.png"
+                  alt="icon"
+                  
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://github.com/taha007860">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/github-ico.png"
+                  alt="icon"
+                />
+              </a>
+              <a target="_blank" rel="noreferrer" href="https://www.instagram.com/mohammedzaatari.123/?hl=en">
+                <img
+                  class="main-footer__icon"
+                  src="./assets/png/insta-ico.png"
+                  alt="icon"
+                />
+              </a>
+            
+            </div>
+          </div>
+          <div class="main-footer__row main-footer__row-2">
+            <h4 class="heading heading-sm text-lt">Mohammad Zaatari</h4>
+            <p class="main-footer__short-desc">
+              Crafting Comprehensive Digital Solutions Since 2022!
+            </p>
+          </div>
+        </div>
+
+        <div class="main-footer__lower">
+          &copy; Copyright 2024. Made by
+          <a rel="noreferrer" target="_blank" href="https://taha007860.github.io/Mohammad-Zaatari-Portfolio/"
+            >Mohammad Zaatari</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="./index.js"></script>
+  </body>
+</html>
